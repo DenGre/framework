@@ -19,6 +19,7 @@ public class BaseTest {
     WebDriver driver;
     String email = "dhryhoryev@gmail.com";
     String password = "123456789Aa";
+    String website = "ssds";
 
     /* Setting up the chrome driver via WebDriveManage, so it will always be updated and not stored locally */
     @BeforeClass
@@ -26,7 +27,7 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.involve.me");
+        driver.get(website);
 
     }
     /* Refreshing the page when needed */
